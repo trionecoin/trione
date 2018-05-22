@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Trione
+Comment=Trione P2P Cryptocurrency
+Exec=trione-qt %u
+Terminal=false
+Type=Application
+Icon=trione128
+MimeType=x-scheme-handler/trione;
+Categories=Office;Finance;
+Name[en_US]=trione-qt.desktop

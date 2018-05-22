@@ -1,0 +1,6 @@
+usr/local/bin/trione-qt usr/bin
+share/pixmaps/trione32.xpm usr/share/pixmaps
+share/pixmaps/trione16.xpm usr/share/pixmaps
+share/pixmaps/trione128.png usr/share/pixmaps
+debian/trione-qt.desktop usr/share/applications
+debian/trione-qt.protocol usr/share/kde4/services/

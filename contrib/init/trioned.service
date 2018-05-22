@@ -1,0 +1,22 @@
+[Unit]
+Description=Trione's distributed currency daemon
+After=network.target
+
+[Service]
+User=trionecore
+Group=trionecore
+
+Type=forking
+PIDFile=/var/lib/trioned/trioned.pid
+ExecStart=/usr/bin/trioned -daemon -pid=/var/lib/trioned/trioned.pid \
+-conf=/etc/trionecore/trione.conf -datadir=/var/lib/trioned -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

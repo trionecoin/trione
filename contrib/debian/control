@@ -1,0 +1,68 @@
+Source: trione
+Section: utils
+Priority: optional
+Maintainer: Holger Schinzel <holger@trione.org>
+Uploaders: Holger Schinzel <holger@trione.org>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libevent-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.35),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.35),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.35),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.35),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.35),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.35),
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python
+Standards-Version: 3.9.2
+Homepage: https://www.trione.org/
+Vcs-Git: git://github.com/trionecoin/trione.git
+Vcs-Browser: https://github.com/trionecoin/trione
+
+Package: trioned
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Trione is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Trione uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Trione Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, trioned, and the CLI tool
+ trione-cli to interact with the daemon.
+
+Package: trione-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Trione is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Trione uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Trione Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides Trione-Qt, a GUI for Trione based on Qt.
+
+Package: trione-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Trione is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Trione uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Trione Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides trione-tx, a command-line transaction creation
+ tool which can be used without a trione daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.
